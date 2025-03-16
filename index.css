@@ -52,5 +52,103 @@
 .banner img{
     max-height:200px;
 }
-
 /* End of Banner */
+
+/* Start of Role */
+.role {
+    display:flex;
+    flex-grow: 1;
+
+    width:100%;
+    padding:50px 0px 50px 0px;
+}
+
+.role-left {
+
+    height: auto;
+    
+    margin: 20px;
+    padding: 40px !important;
+
+    border: solid 2.5px;
+    border-radius: 25px;
+
+    background-color: var(--color-primary);
+
+    transition: 0.4s ease-in-out;
+}
+
+.role-left h1{
+    font-size:30px;
+    font-weight:400;
+}
+
+.role-left-title {
+    line-height:30px;
+    font-size:40px;
+    font-weight:600;
+}
+
+.role-left-i-do {
+    font-weight:300;
+    margin:35px 0px 35px 10px;
+}
+
+.role-left-list {
+    background-color: var(--color-primary);
+    list-style-type: none;
+
+    border:solid var(--color-secondary) 1.75px;
+    border-radius: 15px;
+
+    padding: 0px;
+    overflow: hidden;
+}
+
+.role-left-list li {
+    padding:10px 0px 10px 30px;
+
+    font-weight:400;
+
+    border:solid var(--color-secondary);
+    border-left:none;
+    border-right:none;
+    border-top:none;
+}
+
+.role-left-list ::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(images/common/arrow-bright.svg);
+    margin: 0px 15px 0px -15px; 
+    transform: rotate(-90deg);
+}
+
+#role-left-list-last { border-bottom: none; }
+
+.role-right {
+    border:solid;
+
+    height: 100%;
+    overflow: hidden;
+}
+
+.role-right-image{
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100px;
+    animation: marquee 10s linear infinite;
+}
+
+
+@keyframes marquee {
+    0% { top: 100%; }
+    100% { top: -100%; }
+}
+
+.role-right-image:nth-child(1) { animation-delay: 0s; }
+.role-right-image:nth-child(2) { animation-delay: 1.25s; }
+.role-right-image:nth-child(3) { animation-delay: 2.5s; }
+.role-right-image:nth-child(4) { animation-delay: 3.75s; }

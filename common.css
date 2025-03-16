@@ -7,8 +7,7 @@
 	--color-secondary:	#F2EDE9;
 	--color-accent:		#DC0C24;
 
-	--color-font-white:	#ffffff;
-	--color-font-black:	#000000;
+	--color-dots:		#7e7e7e;
 }
 
 /* Local Variables */
@@ -36,6 +35,8 @@ nav {
 
 	position: sticky;
 	top: 0px;
+
+	z-index: 1000;
 
 	filter: drop-shadow(0px 0px 10px var(--color-secondary));
 }
@@ -141,10 +142,13 @@ nav {
 /* End of Nav Bar */
 
 .body-primary {
-    margin: 0px 12vw 0px 12vw;
+    margin: 20px 12vw 0px 12vw;
 
-    background-color: var(--color-primary);
     color: var(--color-secondary);
+
+	background-color: var(--color-primary);
+	background-image: radial-gradient( var(--color-dots) 1px, transparent 0);
+	background-size: 40px 40px;
 
     display: flex;
 
