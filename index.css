@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+
+/* Start of Banner */
+.banner {
+    margin:0px 4vw 0px 4vw;
+
+    min-height: 350px;
+    height: 45vw;
+    max-height: 500px;
+    width: auto;
+
+    background-image: url("images/works/lauxen-amg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding-top: auto;
+    padding-bottom: calc( 400px *0.1 );
+    overflow: hidden;
+
+    transition: 0.4s ease-in-out;
+}
+
+.banner-padding {
+    position: relative;
+    top: min(170px, 60%);
+
+    filter: drop-shadow(-4px 4px 1px var(--color-primary));
+}
+
+.banner-subtitle{
+    color: var(--color-secondary);
+    padding-left: 5.25vw;
+}
+
+.banner-title { display: none; }
+
+.banner-image {
+
+    background-color: var(--color-secondary);
+
+    border:solid var(--color-primary) 5px;
+    border-left:none;
+    border-right: solid 5vw;
+
+    padding: 5px 20px 5px 5vw;
+    margin-right:30vw;
+
+}
+
+.banner img{
+    max-height:200px;
+}
+
+/* End of Banner */

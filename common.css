@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/* Pallette */
+:root {
+	--color-margin:		#000000;
+	--color-primary:	#222222;
+	--color-secondary:	#F2EDE9;
+	--color-accent:		#DC0C24;
+
+	--color-font-white:	#ffffff;
+	--color-font-black:	#000000;
+}
+
+/* Local Variables */
+.body-main {
+	--font-size-default: 20px;
+}
+
+.body-main {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	font-size: var(--font-size-default);
+
+	background-color: var(--color-margin);
+}
+
+/* Start of Nav Bar */
+nav {
+	height:	75px;
+	width: 100vw;
+
+	background-color: var(--color-secondary);
+	overflow: hidden;
+	
+	align-content: center;
+
+	position: sticky;
+	top: 0px;
+
+	filter: drop-shadow(0px 0px 10px var(--color-secondary));
+}
+
+.nav-icon-left {
+
+	max-width: 120px !important;
+	min-width:60px;
+
+	font-size: 18px;
+	line-height: 15px;
+
+	font-weight: 700;
+
+	border: solid var(--color-primary);
+	border-radius: 0.5rem;
+
+	margin-left: 4vw;
+	padding: 0.25rem 0.0rem 0.25rem 0.55rem !important;
+
+	transition: 0.4s ease-in-out;
+}
+
+@media (max-width: 1400px) {
+	.nav-icon-left-hidden { display: none; }
+}
+
+.nav-ihoke {
+	margin: 0px 20px 0px 20px;
+	max-height:40px;
+}
+
+.nav-action a{
+	text-decoration: none;
+
+	color: var(--color-primary);
+
+	border:solid 2px;
+	border-top:none;
+	border-bottom:none;
+	border-left:none;
+
+	padding:20px 30px 20px 30px;
+
+	transition: 0.4s ease-in-out;
+}
+
+#nav-action-first a{
+	border-left: solid 2px;
+}
+
+.nav-action a:hover{
+	background-color: var(--color-accent);
+	border-color: var(--color-accent);
+	color: var(--color-secondary);
+}
+
+.nav-icon-right {
+	height:50px;
+	margin-right: max(20px, 0.5rem);
+}
+
+.nav-palette-left, .nav-palette-right{
+	--nav-pallette-size:55px;
+	
+	font-size:10px;
+	text-align:right;
+
+	width: var(--nav-pallette-size) !important;
+	height: var(--nav-pallette-size) !important;
+
+	margin: 0px 5px 0px 5px;
+	
+	border: solid var(--color-primary) 2.5px;
+	border-radius: 5px;
+
+	overflow: hidden;
+}
+
+.nav-palette-left-top {
+	padding: 5px 4px 0px 4px;
+
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
+
+	height: 20px;
+	width:  100%;
+}
+
+.nav-palette-left-bottom {
+	padding: 11px 4px 0px 4px !important;
+}
+
+.nav-palette-right {
+	padding:30px 4px 0px 4px !important;
+
+	background-color: var(--color-accent);
+	border-color: var(--color-accent);
+
+	color: var(--color-secondary);
+}
+
+/* End of Nav Bar */
+
+.body-primary {
+    margin: 0px 12vw 0px 12vw;
+
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+
+    display: flex;
+
+	transition: 0.4s ease-in-out;
+}
+
+
+/* Extends the webpage to test scroll */
+.extender {
+	height:500px;
+	text-align: center;
+}
