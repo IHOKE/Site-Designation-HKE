@@ -7,6 +7,7 @@
 	-->
 
 	<!--
+		I am (was) on DXMs
 		I FUCKING HATE BOOTSTRAP
 
 		Look, I understand that there are use cases for Bootstrap;
@@ -19,7 +20,8 @@
 		I have to follow its grid system, and override margins / paddings.
 		The fucking .container / .row / .col ain't no shit, I can make them with defualt CSSes.
 
-		I know what the fuck am I doing, and I could've just used CSS flex boxes.
+		I know what the fuck am I doing (more than most peers),
+		and I could've just used CSS flex boxes.
 		I know that I am out of the ordinary,
 		and most classmates benefit from learning Bootstrap as beginners;
 
@@ -325,7 +327,7 @@
 
 		<!-- Start of About Head-->
 		<div class="body-primary" id="index-body-about-head">
-			<section class="about-head">
+			<section class="social-head">
 				<div class="container-fluid">
 
 					<!-- Question Field -->
@@ -338,7 +340,7 @@
 					<div class="offscreen-header-right" style="margin-top:70px;">
 						<h1>#ASPIRING ARTIST</h1>
 					</div>
-					<div class="offscreen-header-br"></div>
+					<div class="offscreen-header-br" style="margin-top:40px;"></div>
 					<!-- Use .offscreen-header-br when using OffScreen Header -->
 
 				</div>
@@ -348,12 +350,82 @@
 
 		<!-- Start of About Body-->
 		<div class="body-primary">
-			<section class="about-body">
-				Something Amazing
-			</section>
+			<div class="about-section">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>To become those who inspired me</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
+
+					<div class="collapsible-body">
+						<br>
+						<p>This teaou can add as much text as you need hereou can add as much text as you need hereou can add as much text as you need here</p>
+						<p>You can add as much text as you need here.</p>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		<div class="body-primary">
+			<div class="about-section">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>To become those who inspired me</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
+
+					<div class="collapsible-body">
+						<br>
+						<p>This teaou can add as much text as you need hereou can add as much text as you need hereou can add as much text as you need here</p>
+						<p>You can add as much text as you need here.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="body-primary">
+			<div class="about-section">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>To become those who inspired me</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
+
+					<div class="collapsible-body">
+						<br>
+						<p>This teaou can add as much text as you need hereou can add as much text as you need hereou can add as much text as you need here</p>
+						<p>You can add as much text as you need here.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+				
+
+				<script>
+					var coll = document.getElementsByClassName("collapsible-button");
+					var i;
+
+					for (i = 0; i < coll.length; i++) {
+						coll[i].addEventListener("click", function() {
+							this.classList.toggle("active");
+							var content = this.nextElementSibling;
+							if (content.style.maxHeight){
+							content.style.maxHeight = null;
+							} else {
+							content.style.maxHeight = content.scrollHeight + "px";
+							}
+						});
+					}
+				</script>
+
 		<!-- End of About Body-->
 
 		<!-- End of HTML -->
+
+		<div class="extender"></div>
 	</body>
 </html>

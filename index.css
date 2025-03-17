@@ -304,16 +304,12 @@
 }
 /* End of Social Body */
 
-/* Start of About Head */
-.about-head{
+/* Start of About body */
+.about-section {
+    
     width:100%;
+
     display:flex;
-
-    padding:80px 80px 80px 80px;
-
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-
-    align-items:center !important;
+    justify-content:center !important;
 }
-/* End of About Head */
+/* End of About Body */
