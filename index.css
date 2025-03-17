@@ -130,25 +130,48 @@
 
 .role-right {
     border:solid;
+    border-radius: 10px 0px 0px 10px;
 
-    height: 100%;
+    height: 685px;
     overflow: hidden;
-}
-
-.role-right-image{
     position: relative;
-    width: 100%; /* Full width */
-    height: 100px;
-    animation: marquee 10s linear infinite;
 }
 
+.role-right-image {
+    width: 100%;
+    height: 200px;
+    overflow:hidden;
 
-@keyframes marquee {
-    0% { top: 100%; }
-    100% { top: -100%; }
+    margin:0px 0px 15px 0px;
 }
 
-.role-right-image:nth-child(1) { animation-delay: 0s; }
-.role-right-image:nth-child(2) { animation-delay: 1.25s; }
-.role-right-image:nth-child(3) { animation-delay: 2.5s; }
-.role-right-image:nth-child(4) { animation-delay: 3.75s; }
+.role-right-image img { width: 100%; position:relative;}
+
+.role-right-illust {
+    position:relative;
+    width: 110%;
+    height: 250px;
+    top: 0px;
+    left:-5%;
+    margin:0px 0px 15px 0px;
+}
+
+.role-right-fit{ height: auto; }
+
+.role-right-offset {
+    height:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#works-furina {background-image:url(images/works/illust-furina.jpg); }
+
+#works-keychain-senna { background-image:url(images/works/keychain-senna.jpg); }
+
+#works-gummy { background-image:url(images/works/illust-gummy.jpg); }
+
+@media (min-width:1200px) {
+    #works-furina {
+        background-position: 0px -20%;
+    }
+}

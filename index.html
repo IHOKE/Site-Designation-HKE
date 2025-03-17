@@ -30,6 +30,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
 
 		<!-- BootStrap -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -101,11 +102,82 @@
 				</div>
 
 				<div class="role-right col">
-					<h1 class="role-right-image">1</h1>
-					<h1 class="role-right-image">2</h1>
-					<h1 class="role-right-image">3</h1>
-					<h1 class="role-right-image">4</h1>
+
+					  <div class="role-right-image role-right-illust">
+						<div class="role-right-offset" id="works-gummy"></div>
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/cafe-bar.jpg">
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/spitfire.jpg">
+					  </div>
+
+					  <div class="role-right-image">
+						<div class="role-right-offset" id="works-keychain-senna"></div>
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/robot-beach.jpg">
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/marco-before.jpg">
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/marco-after.jpg">
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/ltfc-grad-book.jpg">
+					  </div>
+
+					  <div class="role-right-image role-right-fit">
+						<img src="images/works/weapon-akeara.jpg">
+					  </div>
+
+					  <div class="role-right-image">
+						<div class="role-right-offset" id="works-furina"></div>
+					  </div>
+
 				</div>
+
+				<!-- GSAP Vertical Loop Animation -->
+				<script src="scripts/verticalLoop.js"></script>
+				<script>
+
+					const columns = gsap.utils.toArray(".role-right");
+					window.addEventListener("load", () => {
+						const loops = columns.map((column) => {
+							const items = gsap.utils.toArray(".role-right-image", column);
+							return verticalLoop(items, {
+								draggable: true,
+								repeat: -1,
+								paddingBottom: 10
+							});
+						});
+					});
+
+				</script>
+
+				<!-- Copy From .role-left Flex to .role-right -->
+				<script>
+					function copyHeight() {
+					const roleLeft = document.querySelector('.role-left');
+					const roleRight = document.querySelector('.role-right');
+
+						if (roleLeft && roleRight) {
+							roleRight.style.height = roleLeft.clientHeight + 'px';
+						}
+					}
+
+					// Copy when Windows Resizes
+					copyHeight();
+					window.addEventListener('resize', copyHeight);				
+				</script>
 
 			</section>
 
