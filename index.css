@@ -29,12 +29,18 @@
     filter: drop-shadow(-4px 4px 1px var(--color-primary));
 }
 
-.banner-subtitle{
+.banner-title, .banner-subtitle{
     color: var(--color-secondary);
     padding-left: 5.25vw;
 }
 
-.banner-title { display: none; }
+.banner-subtitle {
+    display: inline;
+    font-size: 20px;
+    font-weight: 400;
+    line-height:0;
+    white-space: nowrap;
+}
 
 .banner-image {
 
@@ -128,13 +134,25 @@
 
 #role-left-list-last { border-bottom: none; }
 
+.role-right-fade-start {
+    width:100%;
+    height: 15px;
+    position: absolute;
+
+    background:linear-gradient( 180deg,
+        var(--color-primary) 0%,
+        transparent 100%);
+
+    z-index:10;
+}
+
 .role-right {
-    border:solid;
-    border-radius: 10px 0px 0px 10px;
 
     height: 685px;
     overflow: hidden;
     position: relative;
+
+    filter:box-shadow;
 }
 
 .role-right-image {
@@ -150,7 +168,7 @@
 .role-right-illust {
     position:relative;
     width: 110%;
-    height: 250px;
+    height: 20vw;
     top: 0px;
     left:-5%;
     margin:0px 0px 15px 0px;
@@ -166,12 +184,136 @@
 
 #works-furina {background-image:url(images/works/illust-furina.jpg); }
 
-#works-keychain-senna { background-image:url(images/works/keychain-senna.jpg); }
+#works-keychain-senna {
+    background-image:url(images/works/keychain-senna.jpg);
+    background-position: 0px -8vw;
+}
 
 #works-gummy { background-image:url(images/works/illust-gummy.jpg); }
+/* End of Role */
 
-@media (min-width:1200px) {
-    #works-furina {
-        background-position: 0px -20%;
-    }
+/* Start of Social Head */
+.social-head{
+    width:100%;
+    display:flex;
+
+    padding:80px 80px 50px 80px;
+
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+
+    align-items:center !important;
 }
+
+.social-head p {
+    width:100%;
+    display: block;
+
+    font-size:25px;
+
+    text-align:center;
+}
+/* End of Social Head */
+
+/* Start of Social Body */
+.social-body {
+    display:flex;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.social-body-desc{
+    width: 50vw;
+
+    text-align: center;
+    margin: 40px auto 40px auto;
+    padding:5px 0px 5px 0px;
+
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+
+    border-radius: 5px;
+}
+
+.social-platform {
+    display: inline-block;
+
+    height: 440px;
+    width: 320px;
+
+    padding:40px;
+
+    border:solid var(--color-secondary);
+    border-top: none;
+    border-bottom: none;
+    border-left:none ;
+
+    text-align: justify;
+    text-justify: inter-word;
+    vertical-align: top;
+
+    white-space: normal;
+    font-weight:300;
+
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.social-platform h2 { margin-top:15px; }
+
+.social-platform-image {
+    height:180px;
+
+    overflow:hidden;
+    background-size: cover;
+    
+    border-radius: 10px;
+}
+
+.social-platform-image img{
+    height:90px;
+
+    position:relative;
+    left: 160px;
+    top: 75px;
+
+    filter:drop-shadow(3px 3px 2px var(--color-secondary));
+}
+
+.social-background-artstation {
+    background-image: url(images/works/weapon-fatalite.jpg);
+    background-position: 0px -5px;
+}
+
+.social-background-twitter {
+    background-image: url(images/works/illust-lumine.jpg);
+    background-position:-50px;
+}
+
+.social-background-instagram {
+    background-image: url(images/works/plant-box-ext-1.jpg);
+    background-size: 110%;
+    background-position:-15px;
+}
+
+.social-background-deviant-art {
+    background-image: url(images/works/scene-archi-1.jpg);
+    background-size: 140%;
+    background-position: 45% ;
+}
+/* End of Social Body */
+
+/* Start of About Head */
+.about-head{
+    width:100%;
+    display:flex;
+
+    padding:80px 80px 80px 80px;
+
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+
+    align-items:center !important;
+}
+/* End of About Head */
