@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 /* Start of Banner */
 .banner {
     margin:0px 4vw 0px 4vw;
@@ -24,7 +23,7 @@
 
 .banner-padding {
     position: relative;
-    top: min(170px, 60%);
+    top: min(150px, 60%);
 
     filter: drop-shadow(-4px 4px 1px var(--color-primary));
 }
@@ -32,6 +31,7 @@
 .banner-title, .banner-subtitle{
     color: var(--color-secondary);
     padding-left: 5.25vw;
+    
 }
 
 .banner-subtitle {
@@ -40,6 +40,10 @@
     font-weight: 400;
     line-height:0;
     white-space: nowrap;
+    background-color: var(--color-accent);
+
+    padding-left: 0px;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .banner-image {
@@ -181,15 +185,6 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-#works-furina {background-image:url(images/works/illust-furina.jpg); }
-
-#works-keychain-senna {
-    background-image:url(images/works/keychain-senna.jpg);
-    background-position: 0px -8vw;
-}
-
-#works-gummy { background-image:url(images/works/illust-gummy.jpg); }
 /* End of Role */
 
 /* Start of Social Head */
@@ -304,12 +299,76 @@
 }
 /* End of Social Body */
 
-/* Start of About body */
-.about-section {
-    
-    width:100%;
+/* Start of About Head */
 
+#offscreen-header-about{
+    left:30vw;
+}
+
+#offscreen-header-about h1{
+    left:0px;
+}
+
+#offscreen-header-featured{
+    left:25vw;
+}
+
+#offscreen-header-featured h1{
+    font-size: 72px;
+    left:0vw;
+}
+
+@media (max-width:1200px) {
+
+	#offscreen-header-featured h1 {
+		font-size:65px;
+	}
+}
+
+
+@media (max-width:900px) {
+	#offscreen-header-featured h1{
+		font-size:55px;
+	}
+}
+
+/* End of About Head */
+
+/* Start of About body */
+.about-collapsible {
     display:flex;
     justify-content:center !important;
 }
 /* End of About Body */
+
+/* Start of Feature Body */
+.feature-body {  }
+
+.feature-body h3 {
+    padding: 15px;
+    margin: 40px;
+
+    border-radius:10px;
+    text-align: center;
+
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+ }
+
+ .feature-header{
+	padding:20px 0px 0px 0px;
+
+	line-height:10px;
+	border-top: solid;
+	border-bottom: solid;
+
+	background-color: var(--color-primary);
+}
+
+.feature-content-image {
+	height: 300px;
+
+	background-size: cover;
+}
+
+/* End of Feature Body */

@@ -1,5 +1,29 @@
 @charset "utf-8";
 
+/* Start of Links to Artworks */
+.works-furina {background-image:url(images/works/illust-furina.jpg); }
+
+.works-keychain-senna {
+    background-image:url(images/works/keychain-senna.jpg);
+    background-position: 0px -8vw;
+}
+
+.works-gummy { background-image:url(images/works/illust-gummy.jpg); }
+
+.works-the-first { background-image:url(images/works/scene-the-first.jpg); }
+
+.works-firefly-thumbnail { background-image:url(images/works/illust-firefly-thumbnail.jpg); }
+
+.works-monika {
+	background-image:url(images/works/illust-monika.jpg);
+	background-position: 0px -8vw;
+}
+
+.works-gradbook {
+	background-image:url(images/works/ltfc-grad-book.jpg);
+}
+/* End of Links to Artworks */
+
 /* Pallette */
 :root {
 	--color-margin:		#000000;
@@ -191,6 +215,7 @@ nav {
 
 	position:absolute;
 	right:0px;
+	left:20vw;
 
 	margin: 5px 12vw 0px 5vw;
 
@@ -262,6 +287,7 @@ nav {
 	.offscreen-header-br { height:130px; }
 }
 
+/* Start of Collapsible */
 .collapsible-main {
 	border:solid;
 	border-radius:5px;
@@ -269,13 +295,13 @@ nav {
 	width:800px;
 
 	overflow: hidden;
-	margin:20px 0px;
+	margin: 30px 0px;
 }
 
 .collapsible-button {
 
 	width: 100%;
-	height: 50px;
+	height: 70px;
 
 
 	color: var(--color-primary);
@@ -288,7 +314,7 @@ nav {
 	transition: 0.4s ease-in-out;
 }
 
-@media (max-width:700px) {
+@media (max-width:800px) {
 	.collapsible-button { height:100px; }
 }
 
@@ -319,7 +345,7 @@ nav {
 	z-index:50;
 }
 
-@media (max-width:900px) {
+@media (max-width:1200px) {
 	.collapsible-arrow-left, .collapsible-arrow-right { display:none; }
 }
 
@@ -328,11 +354,69 @@ nav {
 	max-height: 0px;
 	transition: 0.4s ease-in-out;
 
+	line-height: 25px !important;
+	font-weight: 300;
+
+    text-align: justify;
+    text-justify: inter-word;
+
 	background-color: var(--color-primary);
 	line-height: 20px;
 
 	padding: 0px 40px;
 }
+
+.collapsible-body a { text-decoration:none; }
+
+.collapsible-body p {
+	padding: 0px 0px 15px 0px;
+	font-size: 18px;
+
+}
+
+.collapsible-body h3 {
+	text-align: start;
+
+	border-top:solid var(--color-secondary);
+	padding-top :20px;
+}
+
+.collapsible-img {
+	overflow: hidden;
+	border-radius: 5px ;
+
+	height: 300px;
+	margin: 0px 0px 20px 0px;
+
+	background-size: cover;
+
+	justify-content: right;
+
+}
+
+.collapsible-img p {
+
+	position: relative;
+	top: 85%;
+	
+	margin: 0px 0px 0px 50%;
+	padding: 2px 20px 2px 0px;
+	
+	text-align: right;
+
+	font-weight: 500;
+	white-space: nowrap;
+	border-radius: 2px 0px 0px 2px;
+
+	color: var(--color-primary);
+	background-color: var(--color-secondary) !important;
+}
+
+.collapsible-border-bottom {
+	border-bottom:solid;
+	margin-bottom:25px;
+}
+/* End of Collapsible */
 
 /* Extends the webpage to test scroll */
 .extender {

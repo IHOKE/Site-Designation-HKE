@@ -110,8 +110,11 @@
 				<div class="banner-image">
 					<img src="images/common/logo-title-red.svg">
 				</div>
-				<p class="banner-subtitle">a.k.a.</p>
-				<h1 class="banner-subtitle" style="padding-left: 0px;">HERMINA TEALIE</h1>
+
+				<div class="banner-subtitle" style="padding: 0px 3vw 0px 5.25vw;">
+					<p class="banner-subtitle">A.K.A.</p>
+					<h1 class="banner-subtitle">HERMINA TEALIE</h1>
+				</div>
 			</div>
 		</section>
 
@@ -145,7 +148,7 @@
 						<div class="role-right-fade-start"></div>
 
 						<div class="role-right-image role-right-illust">
-							<div class="role-right-offset" id="works-gummy"></div>
+							<div class="role-right-offset works-gummy"></div>
 						</div>
 
 						<div class="role-right-image role-right-fit">
@@ -169,7 +172,7 @@
 						</div>
 
 						<div class="role-right-image role-right-illust">
-							<div class="role-right-offset" id="works-keychain-senna"></div>
+							<div class="role-right-offset works-keychain-senna"></div>
 						</div>
 
 						<div class="role-right-image role-right-fit">
@@ -181,7 +184,7 @@
 						</div>
 
 						<div class="role-right-image role-right-illust">
-							<div class="role-right-offset" id="works-furina"></div>
+							<div class="role-right-offset works-furina"></div>
 						</div>
 						
 						<div class="role-right-image role-right-fit">
@@ -337,8 +340,8 @@
 					</div>
 
 					<!-- Use .offscreen-header-br when using OffScreen Header -->
-					<div class="offscreen-header-right" style="margin-top:70px;">
-						<h1>#ASPIRING ARTIST</h1>
+					<div class="offscreen-header-right" id="offscreen-header-about" style="margin-top:70px;">
+						<h1>#ABOUT ME</h1>
 					</div>
 					<div class="offscreen-header-br" style="margin-top:40px;"></div>
 					<!-- Use .offscreen-header-br when using OffScreen Header -->
@@ -349,8 +352,8 @@
 		<!-- End of About Head-->
 
 		<!-- Start of About Body-->
-		<div class="body-primary">
-			<div class="about-section">
+		<section class="body-primary" style="display:block; padding: 20px 0px;">
+			<div class="body-primary about-collapsible">
 				<div class="collapsible-main">
 					<button type="button" class="collapsible-button">
 						<div class="collapsible-arrow-left"></div>
@@ -360,72 +363,225 @@
 
 					<div class="collapsible-body">
 						<br>
-						<p>This teaou can add as much text as you need hereou can add as much text as you need hereou can add as much text as you need here</p>
-						<p>You can add as much text as you need here.</p>
+						<div class="collapsible-border-bottom">
+
+							<h3>A childhood dream</h3>
+							<p>
+								It has always been my dream to become an artist,
+								I would go down the street and see amazing artworks done by the others,
+								and one day I would like to become those who inspired me
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="body-primary">
-			<div class="about-section">
-				<div class="collapsible-main">
-					<button type="button" class="collapsible-button">
-						<div class="collapsible-arrow-left"></div>
-						<p>To become those who inspired me</p>
-						<div class="collapsible-arrow-right"></div>
-					</button>
-
-					<div class="collapsible-body">
-						<br>
-						<p>This teaou can add as much text as you need hereou can add as much text as you need hereou can add as much text as you need here</p>
-						<p>You can add as much text as you need here.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="body-primary">
-			<div class="about-section">
-				<div class="collapsible-main">
-					<button type="button" class="collapsible-button">
-						<div class="collapsible-arrow-left"></div>
-						<p>To become those who inspired me</p>
-						<div class="collapsible-arrow-right"></div>
-					</button>
-
-					<div class="collapsible-body">
-						<br>
-						<p>This teaou can add as much text as you need hereou can add as much text as you need hereou can add as much text as you need here</p>
-						<p>You can add as much text as you need here.</p>
-					</div>
-				</div>
-			</div>
-		</div>
 			
-				
+			<div class="body-primary about-collapsible">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>The Start of my Journey</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
 
-				<script>
-					var coll = document.getElementsByClassName("collapsible-button");
-					var i;
+					<div class="collapsible-body">
+						<br>
+						<div class="collapsible-border-bottom">
 
-					for (i = 0; i < coll.length; i++) {
-						coll[i].addEventListener("click", function() {
-							this.classList.toggle("active");
-							var content = this.nextElementSibling;
-							if (content.style.maxHeight){
-							content.style.maxHeight = null;
-							} else {
-							content.style.maxHeight = content.scrollHeight + "px";
-							}
-						});
-					}
-				</script>
+							<h3>It Began in High School</h3>
+							<p>
+								I've started drawing at the start (probably) of my secondary school (high school) life,
+								I would draw on paper and I remembr that I watched DrawABox tutorials.
+							</p>
+							
+							<h3>Getting Into 3D Modelling</h3>
+							<p>
+								Eventually, I realized that DrawABox isn't what I am going after.
+								And after I've gotton into secondary 3 (10th Grade), my IT teacher would convince me into trying Blender, and I did
+							</p>
+							
+							<h3>The First Serious Project</h3>
+							<p>
+								I remembered the very first model I made while I was figuring out the controls was a very simple sniper rifle.
+								Eventually, I've made my first artwork and posted it onto Artstation,
+								and that artwork was posted back in 2019!
+							</p>
 
+							<a href="https://www.artstation.com/artwork/XB3aXL">
+								<div class="collapsible-img works-the-first">
+									<p>The first work!</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="body-primary about-collapsible">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>The year 2021</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
+
+					<div class="collapsible-body">
+						<br>
+						<div class="collapsible-border-bottom">
+
+							<h3>The Year When I got into Illustrating</h3>
+							<p>
+								In the year 2021, I got into digital painting,
+								a fancy way of saying that I got into anime illustration
+							</p>
+							
+							<h3>A Massive Clusterfuck&#153;</h3>
+							<p>
+								In the very same year, The COVID pandemic broke out, which was also my year to have the public exam (HKDSE).
+								So, you can imagine that year turned into a fucking dramma.
+							</p>
+							
+							<h3>An Escape</h3>
+							<p>
+								Maybe because of that, making anime illustration became a form of escape,
+								and I made quite a few works around that time.
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="body-primary about-collapsible">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>Illustrations Now vs Then</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
+
+					<div class="collapsible-body">
+						<br>
+						<div class="collapsible-border-bottom">
+							<h3>Massive Improvements</h3>
+							<p>
+								I've came a long way since I've drawn my first illustration;
+								And hell, its a huge difference compared to then.
+							</p>
+
+							<h3>2025</h3>
+							<a href="https://x.com/IHOKE_/status/1901539470878613873">
+								<div class="collapsible-img works-firefly-thumbnail"></div>
+							</a>
+
+							<h3>2021</h3>
+							<p>Goddamn I don't even want to begin to look at it.</p>
+							<a href="https://www.deviantart.com/ihoke/art/DDLC-Monika-886264999">
+								<div class="collapsible-img works-monika"></div>
+							</a>
+
+							<h3>KMS</h3>
+							<p>Keep Myself Safe.</p>
+							<p>Come to think of it this took like 3 weeks to draw.</p>
+							<p>
+								When I was completely locked in, I could make an illust in one week,
+								but that stuff often leads to burn out and I don't do that often now.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="body-primary about-collapsible">
+				<div class="collapsible-main">
+					<button type="button" class="collapsible-button">
+						<div class="collapsible-arrow-left"></div>
+						<p>Challenges</p>
+						<div class="collapsible-arrow-right"></div>
+					</button>
+
+					<div class="collapsible-body">
+						<br>
+						<div class="collapsible-border-bottom">
+							<h3>My Family</h3>
+							<p>
+								Although some may say that I am somewhat talented, my family seems to see the otherwise.
+								I don't really get support from them, whether it be emotional or financial.
+							</p>
+							<p>
+								Tbf they make my life quite hard, at least emotionally,
+								but that is out of my control.
+							</p>
+
+							<h3>Looking Forward</h3>
+							<p>
+								But they ain't gonna point no fingers in MY life,
+								I know the pursue in art is my destiny, I will die doing art.
+								I swore an oath that I will never give up on pursuing art.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				var coll = document.getElementsByClassName("collapsible-button");
+				var i;
+
+				for (i = 0; i < coll.length; i++) {
+					coll[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var content = this.nextElementSibling;
+						if (content.style.maxHeight){
+						content.style.maxHeight = null;
+						} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+						}
+					});
+				}
+			</script>
+		</section>
 		<!-- End of About Body-->
 
-		<!-- End of HTML -->
+		<!-- Start of Feature Head-->
+		<div class="body-primary" id="index-body-featured-head">
+			<section class="social-head">
+				<div class="container-fluid">
+
+					<!-- Use .offscreen-header-br when using OffScreen Header -->
+					<div class="offscreen-header-right" id="offscreen-header-featured">
+						<h1>#FEATURED WORKS</h1>
+					</div>
+					<div class="offscreen-header-br"></div>
+					<!-- Use .offscreen-header-br when using OffScreen Header -->
+
+				</div>
+			</section>
+		</div>
+		<!-- End of Feature Head-->
+
+		<!-- Start of Feature Body-->
+		<section class="body-primary feature-body" id="index-body-about-head">
+			<div class="container-fluid">
+				<div class="row">
+					<h3 class="col">Here are some of my selected works!</h3>
+				</div>
+
+				<div class="row feature-header">
+					<p class="col-2 feature-header-serial">Work #1</p>
+					<p class="col-3 feature-header-title">2021</p>
+					<p class="col feature-header-year">LTFC Graduation Book Cover</p>
+				</div>
+
+				<div class="row feature-content">
+					<div class="col-5 feature-content-image works-gradbook" style="height:380px;"></div>
+					<p class="col feature-content-desc">LTFC Graduation Book Cover</p>
+				</div>
+			</div>
+		</section>
+		<!-- End of Feature Body-->
 
 		<div class="extender"></div>
+		<!-- End of HTML -->
 	</body>
 </html>
