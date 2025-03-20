@@ -1,3 +1,21 @@
+/* Proudly stolen from GSAP forums */
+
+function loopHorizontal(argChild, argParent, argSpeed) {
+let rowsH = gsap.utils.toArray(argParent);
+
+window.addEventListener("load", () => {
+  const loopH = rowsH.map((rows) => {
+    const itemsH = gsap.utils.toArray(argChild, rows);
+    return horizontalLoop(itemsH, {
+      draggable: true,
+      repeat: -1,
+      speed: argSpeed,
+    })
+  });
+});
+
+}
+
 /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 

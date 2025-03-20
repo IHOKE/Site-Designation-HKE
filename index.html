@@ -5,35 +5,6 @@
 		Author	:	Hermina Tealie
 		SID		:	H10007813
 	-->
-
-	<!--
-		I am (was) on DXMs
-		I FUCKING HATE BOOTSTRAP
-
-		Look, I understand that there are use cases for Bootstrap;
-		Where a web dev can quickly set-up a site with prefabs,
-		or frameworks or whatever horse flying fuck you call them.
-
-		But for the loving fuck of god,
-		I am trying to make my own CSS, to fit in my very own specifically designed website.
-		All it does here is to fuck around and get in the fucking way;
-		I have to follow its grid system, and override margins / paddings.
-		The fucking .container / .row / .col ain't no shit, I can make them with defualt CSSes.
-
-		I know what the fuck am I doing (more than most peers),
-		and I could've just used CSS flex boxes.
-		I know that I am out of the ordinary,
-		and most classmates benefit from learning Bootstrap as beginners;
-
-			>>> Look, I  know it has its uses, <<<
-
-		But this time I am trying to build my own god's green earth forsaken website,
-		and you shouldn't have forced me into using Bootstrap.
-
-		I'll do it because of the fucking grades, just this one fucking time.
-			>>> Next time opt me the F U C K out of it. <<<
-		I do NOT have great thoughts about your decision.
-	-->
 	
 	<head>
 		<meta charset="utf-8">
@@ -60,8 +31,8 @@
 		<!-- GSAP -->
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Observer.min.js"></script>
 
 		<!-- BootStrap -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -83,7 +54,7 @@
 						<a href="index.html">Home</a>
 					</div>
 					<div class="nav-action col-auto">
-						<a href="">Works</a>
+						<a href="#index-feature">Works</a>
 					</div>
 				</div>
 			</div>
@@ -119,7 +90,7 @@
 		</section>
 
 		<!-- Main Container w/ Margin -->
-		<div class="body-primary" id="index-body-role">
+		<div class="body-primary" id="index-role">
 
 			<!-- Section Role -->
 			<section class="container-fluid">
@@ -236,7 +207,7 @@
 		<!-- End of Role -->
 
 		<!-- Start of Social Head -->
-		<div class="body-primary" id="index-body-social-head">
+		<div class="body-primary" id="index-social">
 			<section class="social-head">
 				<div class="container-fluid">
 
@@ -263,7 +234,7 @@
 		<!-- End of Social Head -->
 
 		<!-- Start of Social Body -->
-		<div class="body-primary" id="index-body-social-body">
+		<div class="body-primary">
 			<section class="social-body">
 				<div class="container-fluid">
 					<div class="row g-0">
@@ -273,7 +244,8 @@
 
 							<a href="https://www.artstation.com/ihoke" class="social-platform" id="platform-artstation">
 								<div class="social-platform-image social-background-artstation">
-									<img src="images/common/logo-artstation.svg" alt="Artstation Icon">
+									<img src="images/common/link-bright.svg" class="img-social-link">
+									<img src="images/common/logo-artstation.svg" class="img-social" alt="Artstation Icon">
 								</div>
 								<h2>Artstation</h2>
 								<p>Contains mostly 3D Artworks with weapons as the topic. <br>Not updated frequently.</p>
@@ -282,7 +254,8 @@
 
 							<a href="https://x.com/IHOKE_" class="social-platform" id="platform-twitter">
 								<div class="social-platform-image social-background-twitter">
-									<img src="images/common/logo-twitter.svg" alt="Twitter Icon">
+									<img src="images/common/link-dark.svg" class="img-social-link">
+									<img src="images/common/logo-twitter.svg" class="img-social" alt="Twitter Icon">
 								</div>
 								<h2>Twitter</h2>
 								<p>Most Active Social Media Platform.<br>Features mostly anime illustrations.</p>
@@ -290,7 +263,8 @@
 
 							<a href="https://www.instagram.com/ihoke_/" class="social-platform" id="platform-instagram">
 								<div class="social-platform-image social-background-instagram">
-									<img src="images/common/logo-instagram.svg" alt="Instagram Icon">
+									<img src="images/common/link-dark.svg" class="img-social-link">
+									<img src="images/common/logo-instagram.svg" class="img-social" alt="Instagram Icon">
 								</div>
 								<h2>Instagram</h2>
 								<p>A Mixture of both, containing both 2D and 3D Artworks.</p>
@@ -298,7 +272,8 @@
 
 							<a href="https://www.deviantart.com/ihoke" class="social-platform" id="platform-deviant-art">
 								<div class="social-platform-image social-background-deviant-art">
-									<img src="images/common/logo-deviantart.svg" alt="DeviantArt Icon">
+									<img src="images/common/link-dark.svg" class="img-social-link">
+									<img src="images/common/logo-deviantart.svg" class="img-social" alt="DeviantArt Icon">
 								</div>
 								<h2>DeviantArt</h2>
 								<p>A platform I used to upload to.<br>Has all kinds of stuffs. (probably)</p>
@@ -306,20 +281,7 @@
 
 							<!-- GSAP Horizontal Carousel -->
 							<script src="scripts/loop-horizontal.js"></script>
-							<script>
-								const rows = gsap.utils.toArray(".social-media");
-
-								window.addEventListener("load", () => {
-									const loopH = rows.map((rows) => {
-										const itemsH = gsap.utils.toArray(".social-platform", rows);
-										return horizontalLoop(itemsH, {
-											draggable: true,
-											repeat: -1,
-											speed: 0.4,
-										})
-									});
-								});
-							</script>
+							<script>loopHorizontal(".social-platform", ".social-media", 0.4 );</script>
 							<p class="social-body-desc">Click to go to my socials!</p>
 						</div>
 					<div>
@@ -544,7 +506,7 @@
 		<!-- End of About Body-->
 
 		<!-- Start of Feature Head-->
-		<div class="body-primary" id="index-body-featured-head">
+		<div class="body-primary" id="index-feature">
 			<section class="social-head">
 				<div class="container-fluid">
 
@@ -553,6 +515,7 @@
 						<h1>#FEATURED WORKS</h1>
 					</div>
 					<div class="offscreen-header-br"></div>
+					<p>Notable Works.</p>
 					<!-- Use .offscreen-header-br when using OffScreen Header -->
 
 				</div>
@@ -560,26 +523,182 @@
 		</div>
 		<!-- End of Feature Head-->
 
-		<!-- Start of Feature Body-->
-		<section class="body-primary feature-body" id="index-body-about-head">
-			<div class="container-fluid">
-				<div class="row">
-					<h3 class="col">Here are some of my selected works!</h3>
-				</div>
+		<!-- Start of Feature Body--> <!-- Fucking Bootstrap Tomfoolery-->
+		<section>
+			<!-- Start of Feature #1 -->
+			<div class="body-primary">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 feature-work-main-dark">
 
-				<div class="row feature-header">
-					<p class="col-2 feature-header-serial">Work #1</p>
-					<p class="col-3 feature-header-title">2021</p>
-					<p class="col feature-header-year">LTFC Graduation Book Cover</p>
-				</div>
+							<h1 class="feature-work-title-dark" style="font-size: 7.725vw;">LTFC GRAD BOOK</h1>
+							<script src="scripts/loop-stagger.js"></script>
+							<script>loopStagger(".feature-work-title-dark",".feature-work-main-dark");</script>
 
-				<div class="row feature-content">
-					<div class="col-5 feature-content-image works-gradbook" style="height:380px;"></div>
-					<p class="col feature-content-desc">LTFC Graduation Book Cover</p>
+							<div class="container-fluid">
+								<div class="row feature-work-simple">
+									<div class="col-6">
+										<div class="feature-work-simple-image">
+											<img src="images/works/ltfc-grad-book.jpg">
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="container-fluid">
+											<div class="row feature-work-simple-detail">
+												<div class="col-6 feature-work-simple-detail-header">
+													<p>Year</p>
+													<p>Medium</p>
+													<p>Software</p>
+												</div>
+												<div class="col-6 feature-work-simple-detail-content">
+													<p>2021</p>
+													<p>2D Graphic</p>
+													<p>Photoshop</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12 feature-work-simple-desc scrollbar-container">
+													<p>
+														The project
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
+			<!-- End of Feature #1 -->
+
+			<!-- Start of Feature #2 -->
+			<div class="body-primary feature-work-main-bright">
+				<div class="container-fluid">
+
+					<!-- Feature Title -->
+					<div class="row">
+						<div class="col-12">
+							<h1 class="feature-work-title-bright" style="font-size: 9.2vw;">SPITFIRE MKV</h1>
+							<script>loopStagger(".feature-work-title-bright",".feature-work-main-dark");</script>
+						</div>
+					</div>
+
+					<div class="row feature-work-complex-detail">
+						<div class="col-2 feature-work-complex-detail-left">
+							Year
+						</div>
+
+						<div class="col-3 feature-work-complex-detail-right feature-work-complex-detail-separator-right">
+							2022
+						</div>
+
+						<div class="col-3 feature-work-complex-detail-left" style="padding-left:30px;">
+							<p>Medium</p>
+							<p>Software</p>
+						</div>
+
+						<div class="col-4 feature-work-complex-detail-right">
+							<p>3D CGI / Model</p>
+							<div class="feature-work-overflow">
+								<p id="overflow-feature-1">
+									Unreal 5<br>
+									Blender<br>
+									Substance Painter<br>
+									Photoshop
+								</p>
+							</div>
+
+							<script src="scripts/loop-bottomtop.js"></script>
+							<script>loopBottomTop("#overflow-feature-1", 1);</script>
+						</div>
+					</div>
+
+					<div class="row feature-work-complex-body">
+						<div class="col-7">
+							<div class="feature-work-complex-img works-spitfire">sdsd</div>
+						</div>
+
+						<div class="col-5 feature-work-complex-desc scrollbar-container">
+							<p>
+								Description Lorem Ipsum isdosjdpspdjspdjpsjdjspdosodjpsjdpojpsjdpjspdojspdjpsdopsjpdojposjdpsjdpojspdsdhiasidhiashdiashdoasdioasjdioasoidoiasdoiasjdojpod
+								pdjspdjpsjdjspdoso
+								pdjspdjpsjdjspdoso
+								pdjspdjpsjdjspdoso
+							</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 feature-reel">
+							Carousel
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of Feature #2 -->
 		</section>
 		<!-- End of Feature Body-->
+
+		<!-- Start of Footer -->
+		<footer class="body-primary">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="footer-header col-12">
+						<p>Licensed under CC BY-NC-SA 4.0 © 2025 IHOKE</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="footer-body col">
+						<div class="container-fluid" >
+
+							<div class="footer-body-title row">
+								<div class="footer-body-title-col col">
+									<h1>IHOKE ART</h1>
+								</div>
+							</div>
+
+							<div class="footer-body-content row">
+								<div class="col">
+									<div class="container-fluid">
+										<div class="row">
+
+											<div class="col-6 container-fluid footer-social">
+												<h2>Social Media</h2>
+												<div class="row">
+													<a href="https://www.artstation.com/ihoke" class="col">
+														<img src="images/common/logo-artstation.svg">
+													</a>
+													<div class="col"><img src="images/common/logo-twitter.svg"></div>
+													<div class="col"><img src="images/common/logo-instagram.svg"></div>
+													<div class="col"><img src="images/common/logo-deviantart.svg"></div>
+												</div>
+											</div>
+
+											<div class="col-2 footer-contact-left">
+												<p>Discord</p>
+												<p>Email</p>
+											</div>
+											
+											<div class="col-4 footer-contact-right">
+												<p>ihoke_art</p>
+												<p>ihokeart@gmail.com</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End of Footer -->
 
 		<div class="extender"></div>
 		<!-- End of HTML -->
