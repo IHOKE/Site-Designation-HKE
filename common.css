@@ -22,6 +22,8 @@
 .works-gradbook { background-image:url(images/works/ltfc-grad-book.jpg); }
 
 .works-spitfire { background-image:url(images/works/spitfire.jpg); }
+
+.works-handy { background-image:url(images/works/robot-beach.jpg); }
 /* End of Links to Artworks */
 
 /* Pallette */
@@ -45,6 +47,16 @@
 	font-size: var(--font-size-default);
 
 	background-color: var(--color-margin);
+}
+
+ul ::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(images/common/arrow-bright.svg);
+    margin: 0px 15px 0px -15px; 
+    transform: rotate(-90deg);
 }
 
 /* Start of Nav Bar */
@@ -480,13 +492,6 @@ nav {
 	text-align:right;
 }
 /* End of Footer */
-
-/* Extends the webpage to test scroll */
-.extender {
-	height:500px;
-	text-align: center;
-}
-
 .scrollbar-container::-webkit-scrollbar-thumb {
     background-color: var(--color-dots); /* Scrollbar thumb color */
     border-radius: 10px; /* Scrollbar thumb rounded corners */
@@ -498,4 +503,10 @@ nav {
 
 .scrollbar-container {
 	scrollbar-color: var(--color-dots);
+}
+
+/* Extends the webpage to test scroll */
+.extender {
+	height:100px;
+	text-align: center;
 }
